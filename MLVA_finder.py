@@ -385,7 +385,7 @@ def find(primers,fasta,round,nbmismatch) :
 						if str(sizeU)[-2:]=='.0' : sizeU=int(sizeU)
 						best_res[4]=sizeU									#set of the rounded sizeU value
 					if primer_info[0] in dico_res and dico_res[primer_info[0]][4] != "" :
-						best_res[5] = best_res[5]+", "+sequence+str(s+1) 	#if there's already a result with perfect matches
+						best_res[5] = best_res[5]+";"+sequence+str(s+1) 	#if there's already a result with perfect matches
 					dico_res[primer_info[0]]=best_res						#set the best result as a new key : value in the dictionnary #replace the old dictionnary value if there is one
 					if flanking is True : 
 						dico_flanking[primer_info[0]]=get_flanking(seq,primer,pos_match,pos_match2,splitted)
